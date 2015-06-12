@@ -22,6 +22,20 @@ If the VM is already running you can reload it and redo
 provisioning with: `vagrant reload --provision`.
 
 
+## Installed
+
+Setup installs the following tools on the VM:
+
+* `docker`
+* `docker-compose`
+* `git`
+* `curl`
+
+The full list of tools can be found in `vagrant_files/playbook.yml`
+except `docker` which is installed with vagrant's built-in
+docker install command (`config.vm.provision "docker"`).
+
+
 ## Usage
 
 Once the setup is complete you can:
@@ -29,3 +43,6 @@ Once the setup is complete you can:
 * start the VM with: `vagrant up`
 * log (ssh) into the VM: `vagrant ssh`
 * stop the VM: quit from the VM with `exit` and then `vagrant halt`
+
+To use `docker-compose` you have to use `sudo` or switch
+to super user with `sudo su`.

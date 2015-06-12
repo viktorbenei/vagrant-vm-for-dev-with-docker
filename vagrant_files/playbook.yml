@@ -15,5 +15,5 @@
       sudo: yes
       args:
         creates: /usr/local/bin/docker-compose
-    - file: path=/usr/local/bin/docker-compose state=file mode="u=rwx,g=rx,o=x"
-      sudo: yes 
+    - file: path=/usr/local/bin/docker-compose state=file mode="u=rwx"
+      sudo: yes
