@@ -1,0 +1,19 @@
+-
+  hosts: all
+  sudo: no
+  tasks:
+    # Run the equivalent of "apt-get update" as a separate step
+    - apt: update_cache=yes
+      sudo: yes
+    - name: install apt packages
+      apt: "name='{{ item }}' state=present"
+      with_items:
+        - git
+        - curl
+      sudo: yes
+    - shell: curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+      sudo: yes
+      args:
+        creates: /usr/local/bin/docker-compose
+    - file: path=/usr/local/bin/docker-compose state=file mode="u=rwx,g=rx,o=x"
+      sudo: yes 
