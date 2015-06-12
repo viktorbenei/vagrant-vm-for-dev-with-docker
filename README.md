@@ -11,8 +11,8 @@ but it's easy to extend it (in the `Vagrantfile`) with a new one.
 Set these Environment Variables (best to do so in your `bash` / `fish` / etc shell profile,
 for `bash` you should add these to your `~/.bash_profile`):
 
-* export MY_DEV_PATH=path/to/your/development/folder
-* export VAGRANT_DEFAULT_PROVIDER=[virtualbox/parallels]
+* `export MY_DEV_PATH=path/to/your/development/folder`
+* `export VAGRANT_DEFAULT_PROVIDER=[virtualbox/parallels]`
 
 Start this `vagrant` VM: `vagrant up --provision`
 
