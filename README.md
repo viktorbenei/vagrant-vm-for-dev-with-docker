@@ -8,8 +8,21 @@ but it's easy to extend it (in the `Vagrantfile`) with a new one.
 
 ## Setup
 
+Required tools:
+
+* `vagrant (brew cask install vagrant)`
+* `ansible (brew install ansible)`
+* `virtualbox (brew cask install virtualbox) or parallels`
+
 Set these Environment Variables (best to do so in your `bash` / `fish` / etc shell profile,
 for `bash` you should add these to your `~/.bash_profile`):
+
+* `echo >> ~/.bash_profile`
+* `echo "export MY_DEV_PATH=path/to/your/development/folder >> ~/.bash_profile`"
+* `echo "export VAGRANT_DEFAULT_PROVIDER=[virtualbox/parallels] >> ~/.bash_profile`"
+* `source ~/.bash_profile`
+
+Or export these Environment Variables in session wich use vagrant-vm-for-dev-with-docker
 
 * `export MY_DEV_PATH=path/to/your/development/folder`
 * `export VAGRANT_DEFAULT_PROVIDER=[virtualbox/parallels]`
